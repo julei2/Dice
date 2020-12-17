@@ -17,17 +17,17 @@ void mousePressed()
   }
 class Die
   {
-     int sum, roll, myX, myY;
+     int sum, dots, myX, myY;
       Die(int x, int y)
       {
           myX = x;
           myY = y;
           sum = 0;
-          roll = 0;
+          dots = 0;
       }
       void roll()
       {
-         roll = 0;
+         dots = 0;
       }
       void show()
       {
@@ -38,26 +38,26 @@ class Die
               {
                fill((int)(Math.random()*255)+200, (int)(Math.random()*255)+100,(int)(Math.random()*255)+100);
                rect(x,y,60,60);
-               int roll = (int)(Math.random()*6)+1;
-               if(roll == 1)
+               int dots = (int)(Math.random()*6)+1;
+               if(dots == 1)
                {
                  ellipse(x+30,y+30,5,5);
                  sum++;
                }
-               if(roll == 2)
+               if(dots == 2)
                {
                  ellipse(x+15,y+15,5,5);
                  ellipse(x+45,y+45,5,5);
                  sum+=2;
                }
-               if(roll == 3)
+               if(dots == 3)
                {
                  ellipse(x+15,y+15,5,5);
                  ellipse(x+30,y+30,5,5);
                  ellipse(x+45,y+45,5,5);
                  sum+=3;
                }
-               if(roll == 4)
+               if(dots == 4)
                {
                  ellipse(x+15,y+15,5,5);
                  ellipse(x+15,y+45,5,5);
@@ -65,7 +65,7 @@ class Die
                  ellipse(x+45,y+45,5,5);
                  sum+=4;
                }
-               if(roll == 5)
+               if(dots == 5)
                {
                  ellipse(x+15,y+15,5,5);
                  ellipse(x+45,y+15,5,5);
@@ -74,7 +74,7 @@ class Die
                  ellipse(x+15,y+45,5,5);
                  sum+=5;
                }
-               if(roll == 6)
+               if(dots == 6)
                {
                  ellipse(x+15,y+15,5,5);
                  ellipse(x+45,y+15,5,5);
